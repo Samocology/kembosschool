@@ -42,7 +42,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 overflow-hidden">
+      <section className="relative pt-12 pb-20 overflow-hidden">
         {/* Ambient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-transparent to-transparent" />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-400/10 via-indigo-400/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
@@ -75,9 +75,11 @@ export default function Home() {
                     Get Started <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
-                <Button variant="ghost" className="text-slate-700 hover:text-slate-900 hover:bg-white/60 font-medium rounded-xl px-5 py-2.5 h-11 text-sm gap-2">
-                  <Play className="w-4 h-4" /> Watch Demo
-                </Button>
+                <Link href="/contact">
+                  <Button variant="ghost" className="text-slate-700 hover:text-slate-900 hover:bg-white/60 font-medium rounded-xl px-5 py-2.5 h-11 text-sm gap-2">
+                    <MessageSquare className="w-4 h-4" /> Contact Us
+                  </Button>
+                </Link>
               </div>
             </div>
             
@@ -374,11 +376,14 @@ export default function Home() {
 
           <div className="space-y-3">
             {[
-              { q: "How secure is our data?", a: "Enterprise-grade encryption with daily backups. Fully compliant with international data protection standards and local regulations." },
-              { q: "How long does implementation take?", a: "Most schools are operational within 48-72 hours. Our dedicated onboarding team provides full support throughout the process." },
-              { q: "Can we integrate existing systems?", a: "Yes. Kembos integrates seamlessly with major education platforms and supports custom API connections for specialized tools." },
-              { q: "What support do you provide?", a: "24/7 technical support via email, phone, and live chat. Enterprise clients receive dedicated account managers." },
-              { q: "Is there a mobile version?", a: "Our platform is fully responsive and works flawlessly on all devices. Native mobile apps are in development." }
+              { q: "How can students access their results online?", a: "Students can securely log in to their dashboard to view examination results, report cards, and academic performance records." },
+              { q: "Can parents monitor their child's academic progress?", a: "Yes. Parents have access to a dedicated portal where they can track results, attendance records, assignments, and school announcements." },
+              { q: "Is student information secure?", a: "Absolutely. We use secure authentication and data protection measures to ensure that all student, parent, and staff information remains confidential and protected." },
+              { q: "Can the system be used on mobile phones?", a: "Yes. The platform is fully responsive and can be accessed on smartphones, tablets, laptops, and desktop computers." },
+              { q: "What features are available for teachers and administrators?", a: "Teachers can manage attendance, assignments, and student records, while administrators can oversee admissions, fees, results, staff management, and school-wide operations." },
+              { q: "Does the system support online learning and CBT examinations?", a: "Yes. Students can access e-learning materials, submit assignments, and participate in Computer-Based Tests (CBT) directly through the platform." },
+              { q: "How are school announcements communicated?", a: "Important notices, events, and announcements are delivered through the system's notification center and can also be sent to parents and students." },
+              { q: "Can report cards be downloaded and printed?", a: "Yes. Students and parents can download and print report cards and academic records whenever needed." }
             ].map((item, idx) => (
               <details key={idx} className="group">
                 <summary className="flex items-center justify-between p-4 bg-white/50 backdrop-blur-md rounded-xl border border-white/40 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer list-none">
